@@ -101,7 +101,7 @@ Simon's algorithm \cite{Sim94} provides an exponential separation between $\BQP^
 
 We define the problem as follow --- given an oracle for the graph and the name of the $\ent$, find the name of the $\exit$. The construction of the graph is shown by examples in Figure \ref{fig:graph} and Figure \ref{fig:graphprime}. Despite that classical random walk requires steps exponential in $n$ to find the $\exit$ with high probability, one can easily construct a classical algorithm to solve the traversal problem using the fact that nodes in the middle are with degree $2$.
 
-For the rest of this survey, I will introduce quantum walk and show its efficiency in Section \ref{sec:algorithm} and demonstrate the classical lower bound in Section \ref{sec:algorithm}. Some details of the proofs will be skipped and you may find them in the original paper \cite{EXP03}.
+For the rest of this survey, I will introduce quantum walk and show its efficiency in Section \ref{sec:algorithm} and demonstrate the classical lower bound in Section \ref{sec:lowerbound}. Some details of the proofs will be skipped and you may find them in the original paper \cite{EXP03}.
 
 \begin{figure}
 \includegraphics[width=280pt]{basicgraph4}
@@ -357,7 +357,7 @@ in the state $|0\>$. After that, we apply the appropriate phase shift ($Z$ or $I
 \label{fig:simT}
 \end{figure}
 
-The targeted Hamiltonian $H$ equals to $\sum_c V_c^\dag T V_c$ \footnote{The proof us relatively straight-forward and can be found in the original paper \cite{EXP03}}, which can be simulated using unitary conjugation and linear combination. \footnote{$V_c^\dag = V_c$}
+The targeted Hamiltonian $H$ equals to $\sum_c V_c^\dag T V_c$ \footnote{The proof is relatively straight-forward and can be found in the original paper \cite{EXP03}}, which can be simulated using unitary conjugation and linear combination. \footnote{$V_c^\dag = V_c$}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Physical intuition: propagation on a line}\label{subsec:line}
@@ -635,7 +635,7 @@ The authors make a consistent coloring that does not provide information for any
   vertex, or if the subgraph it has seen contains a cycle.
 \end{game}
 
-Game \ref{game:nocycles} is clearly easier to win than Game \ref{game:nocolors}. And by this, we restrict the subgraph an algorithm sees must be a rooted binary tree
+Game \ref{game:nocycles} is clearly easier to win than Game \ref{game:nocolors}. And by this, we restrict the subgraph an algorithm sees must be a rooted binary tree.
 
 \subsection{Reformulation as Tree Embedding}
 
